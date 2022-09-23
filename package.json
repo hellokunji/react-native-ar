@@ -1,5 +1,5 @@
 {
-  "name": "react-native-ar",
+  "name": "@hellokunji/react-native-ar",
   "version": "0.1.0",
   "description": "test",
   "main": "lib/commonjs/index",
