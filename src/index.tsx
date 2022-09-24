@@ -18,3 +18,7 @@ const Ar = NativeModules.Ar  ? NativeModules.Ar  : new Proxy(
 export function multiply(a: number, b: number): Promise<number> {
   return Ar.multiply(a, b);
 }
+
+export function showToast(msg: string): void{
+  return Ar.showToast(msg);
+}

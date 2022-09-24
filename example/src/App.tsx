@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-ar';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { multiply, showToast } from 'react-native-ar';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
@@ -13,6 +13,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
+      <Button title="Show toast" onPress={() => showToast('Okay i am visible')} />
     </View>
   );
 }
