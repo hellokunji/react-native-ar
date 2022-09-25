@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-ar": ["./src/index"]
+      "@hellokunji/react-native-ar": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
