@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text, Button } from 'react-native';
-import { multiply, showToast, startWorkManager } from 'react-native-ar';
+import { multiply, showToast, startWorkManager } from '@hellokunji/react-native-ar';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
@@ -19,7 +19,7 @@ export default function App() {
       />
       <Button
         title="Show notification"
-        onPress={() => startWorkManager('Okay i am visible')}
+        onPress={() => startWorkManager()}
       />
     </View>
   );
