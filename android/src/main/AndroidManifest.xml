@@ -3,10 +3,17 @@
   package="com.reactnativear">
 
   <application>
-    <service
-      android:name=".BlurService"
-      android:enabled="true"
-      android:exported="true"></service>
+    <activity
+      android:name=".dummyActivity.DummyActivity"
+      android:exported="false">
+      <meta-data
+        android:name="android.app.lib_name"
+        android:value="" />
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.ALTERNATIVE" />
+      </intent-filter>
+    </activity>
   </application>
 
 </manifest>

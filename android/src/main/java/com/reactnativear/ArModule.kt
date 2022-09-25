@@ -1,11 +1,11 @@
 package com.reactnativear
-import android.content.Context
+import android.content.Intent
 import android.widget.Toast
+import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
-import makeStatusNotification
+import com.reactnativear.dummyActivity.DummyActivity
 
 class ArModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -25,8 +25,11 @@ class ArModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModu
 
    @ReactMethod
    fun startWorkManager() {
-     val appContext: Context = reactApplicationContext
-     makeStatusNotification("Starting the work manager", appContext)
+//     val appContext: Context = reactApplicationContext
+//     makeStatusNotification("Starting the work manager", appContext)
+     val intent = Intent(reactApplicationContext, DummyActivity::class.java)
+     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+     reactApplicationContext.startActivity(intent)
    }
 
 }
