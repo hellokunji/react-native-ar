@@ -3,13 +3,13 @@ ar
 ## Installation
 
 ```sh
-npm install react-native-ar
+npm install @hellokunji/react-native-ar
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-ar";
+import { multiply } from "@hellokunji/react-native-ar";
 
 // ...
 
