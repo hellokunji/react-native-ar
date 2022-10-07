@@ -25,6 +25,14 @@ export function showToast(msg: string): void {
   return Ar.showToast(msg);
 }
 
-export function startWorkManager(): void {
-  return Ar.startWorkManager();
+export function startARActivity(): void {
+  return Ar.startARActivity();
+}
+
+export function startTrip(): void {
+  return Ar.startTrip();
+}
+
+export function endTrip(): void {
+  return Ar.endTrip();
 }
