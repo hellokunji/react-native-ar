@@ -2,15 +2,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.reactnativear">
 
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
   <application>
+
+    <receiver
+      android:name=".ActivityReceiver"
+      android:exported="true"
+      android:permission="com.google.android.gms.permission.ACTIVITY_RECOGNITION">
+      <intent-filter>
+        <action android:name="action.TRANSITIONS_DATA" />
+      </intent-filter>
+    </receiver>
+
+    <service
+      android:name=".ActivityService"
+      android:enabled="true"
+      android:exported="true" />
+
     <activity
       android:name=".dummyActivity.DummyActivity"
       android:exported="false">
       <meta-data
         android:name="android.app.lib_name"
         android:value="" />
+
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
+
         <category android:name="android.intent.category.ALTERNATIVE" />
       </intent-filter>
     </activity>

@@ -8,19 +8,48 @@
   android:layout_height="match_parent"
   android:padding="0dp"
     tools:context=".dummyActivity.DummyActivity">
-    <androidx.appcompat.widget.LinearLayoutCompat
-      android:layout_width="wrap_content"
+  <Button
+    android:id="@+id/back_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Back"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/text_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Dummy activity 124"
+    app:layout_constraintStart_toStartOf="@id/back_btn"
+    app:layout_constraintTop_toBottomOf="@id/back_btn" />
+
+  <Space
+    android:id="@+id/space"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text_btn" />
+
+  <androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/space">
+    <Button
+      android:id="@+id/start_trip"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintStart_toStartOf="parent">
-      <Button
-        android:id="@+id/back_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back" />
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dummy activity"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+      android:text="Start Trip"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_btn" />
+    <Button
+      android:id="@+id/end_trip"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="End Trip"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_btn" />
+  </androidx.appcompat.widget.LinearLayoutCompat>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
